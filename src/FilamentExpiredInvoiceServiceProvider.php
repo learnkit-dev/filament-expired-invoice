@@ -24,6 +24,10 @@ class FilamentExpiredInvoiceServiceProvider extends ServiceProvider
         Livewire::component('filament-expired-invoice-notice', \LearnKit\FilamentExpiredInvoice\Livewire\Notice::class);
 
         Filament::serving(function () {
+            if (!auth()->check()) {
+                return;
+            }
+
             Filament::registerRenderHook(PanelsRenderHook::BODY_END, fn() => Blade::render("@livewire('filament-expired-invoice-notice')", deleteCachedView: true));
         });
     }
