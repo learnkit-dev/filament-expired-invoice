@@ -1,0 +1,29 @@
+{
+    "name": "learnkit/filament-expired-invoice",
+    "description": "Expired invoice for Filament",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Sebastiaan Kloos",
+            "email": "sebastiaan@learnkit.dev"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LearnKit\\FilamentExpiredInvoice\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10",
+        "filament/filament": "^3.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LearnKit\\FilamentExpiredInvoice\\FilamentExpiredInvoiceServiceProvider"
+            ]
+        }
+    }
+}
