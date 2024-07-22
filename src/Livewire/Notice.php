@@ -15,10 +15,6 @@ class Notice extends Component implements HasActions, HasForms
 {
     use InteractsWithActions, InteractsWithForms;
 
-    public function mount()
-    {
-    }
-
     public function showModal()
     {
         $snooze = Session::get(static::class);
